@@ -1,0 +1,15 @@
+server:
+  port: 7901
+  servlet:
+    context-path: /
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  data:
+    mongodb:
+      uri: mongodb+srv://test:test@projetolympique.atmyvvn.mongodb.net/?retryWrites=true&w=majority&appName=projetOlympique
+      database: projetOlympique

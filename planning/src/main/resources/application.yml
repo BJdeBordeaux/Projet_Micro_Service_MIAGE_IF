@@ -1,0 +1,31 @@
+server:
+  port: 7904
+  servlet:
+    context-path: /
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:postgresql://projet-olympique-projet-olympique.k.aivencloud.com:26535/defaultdb?ssl=require&user=avnadmin&password=AVNS_NWhfQKoaINkHSl0pir9
+    username: avnadmin
+    password: AVNS_NWhfQKoaINkHSl0pir9
+    # use local database
+    #    url: jdbc:postgresql://localhost:5432/projetOlympique
+    #    username: test
+    #    password: test
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate.default_schema: public
+      hibernate.format_sql: true
+      hibernate.jdbc.time_zone: UTC
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
