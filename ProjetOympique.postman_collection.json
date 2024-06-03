@@ -1,0 +1,1062 @@
+{
+  "info": {
+    "_postman_id": "7f892793-7b6d-4e24-8d39-3fb76519d483",
+    "name": "ProjetOympique",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "19293387"
+  },
+  "item": [
+    {
+      "name": "site",
+      "item": [
+        {
+          "name": "get all sites",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{site_url}}",
+              "host": [
+                "{{site_url}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update a site from code",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"GRP\",\r\n    \"nom\": \"Grand Palais\",\r\n    \"category_id\": \"venue-olympic\",\r\n    \"latitude\": 48.86616355,\r\n    \"longitude\": 2.3125474\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{site_url}}/GRP",
+              "host": [
+                "{{site_url}}"
+              ],
+              "path": [
+                "GRP"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "para-olympique",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"category_id\": \"venue-paraolympic\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{site_url}}/GRP",
+                  "host": [
+                    "{{site_url}}"
+                  ],
+                  "path": [
+                    "GRP"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "get a site from code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{site_url}}/GRP",
+              "host": [
+                "{{site_url}}"
+              ],
+              "path": [
+                "GRP"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create a site",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"GRP2\",\r\n    \"nom\": \"Grand Palais\",\r\n    \"category_id\": \"venue-paraolympic\",\r\n    \"latitude\": 48.86616355,\r\n    \"longitude\": 2.3125474\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{site_url}}",
+              "host": [
+                "{{site_url}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete a site",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"GRP2\",\r\n    \"nom\": \"Grand Palais\",\r\n    \"category_id\": \"venue-paraolympic\",\r\n    \"latitude\": 48.86616355,\r\n    \"longitude\": 2.3125474\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{site_url}}/GRP2",
+              "host": [
+                "{{site_url}}"
+              ],
+              "path": [
+                "GRP2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "sport",
+      "item": [
+        {
+          "name": "get all sports",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{sport_url}}",
+              "host": [
+                "{{sport_url}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update a sport from code",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"presentation\": \"L'escrime est un sport de combat utilisant une épée, un sabre ou un fleuret!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{sport_url}}/FEN",
+              "host": [
+                "{{sport_url}}"
+              ],
+              "path": [
+                "FEN"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update a sport from code Revert",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"presentation\": \"L'escrime est un sport de combat utilisant une épée, un sabre ou un fleuret.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{sport_url}}/FEN",
+              "host": [
+                "{{sport_url}}"
+              ],
+              "path": [
+                "FEN"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get a site from code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{sport_url}}/FEN",
+              "host": [
+                "{{sport_url}}"
+              ],
+              "path": [
+                "FEN"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create a sport",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"FEN2\",\r\n    \"nom\": \"Escrime\",\r\n    \"presentation\": \"L'escrime est un sport de combat utilisant une épée, un sabre ou un fleuret!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{sport_url}}",
+              "host": [
+                "{{sport_url}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete a sport",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"GRP2\",\r\n    \"nom\": \"Grand Palais\",\r\n    \"category_id\": \"venue-paraolympic\",\r\n    \"latitude\": 48.86616355,\r\n    \"longitude\": 2.3125474\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{sport_url}}/FEN2",
+              "host": [
+                "{{sport_url}}"
+              ],
+              "path": [
+                "FEN2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "planning",
+      "item": [
+        {
+          "name": "get all plannings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{planning_url}}",
+              "host": [
+                "{{planning_url}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get a person's all plannings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{planning_url}}/1",
+              "host": [
+                "{{planning_url}}"
+              ],
+              "path": [
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update a planning from id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"2024-08-04\",\r\n    \"sport\": \"Boxe\",\r\n    \"nomSite\": \"Arena Bercy\",\r\n    \"latitude\": 48.83863,\r\n    \"longitude\": 2.378597\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{planning_url}}/5",
+              "host": [
+                "{{planning_url}}"
+              ],
+              "path": [
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update a planning from id Reverse",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"date\": \"2024-07-30T00:00:00.000+00:00\",\r\n    \"sport\": \"Gymnastique artistique\",\r\n    \"nomSite\": \"Arena Paris Nord\",\r\n    \"latitude\": 48.9721,\r\n    \"longitude\": 2.5149\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{planning_url}}/5",
+              "host": [
+                "{{planning_url}}"
+              ],
+              "path": [
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create a planning",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"idPerson\": 1,\r\n    \"date\": \"2024-08-06\",\r\n    \"sport\": \"Judo\",\r\n    \"nomSite\": \"Arena Champ de Mars\",\r\n    \"latitude\": 48.8531,\r\n    \"longitude\": 2.30252\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{planning_url}}",
+              "host": [
+                "{{planning_url}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "create a repeated planning",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"idPerson\": 1,\r\n    \"date\": \"2024-08-05\",\r\n    \"sport\": \"Judo\",\r\n    \"nomSite\": \"Arena Champ de Mars\",\r\n    \"latitude\": 48.8531,\r\n    \"longitude\": 2.30252\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{planning_url}}",
+                  "host": [
+                    "{{planning_url}}"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "delete a planning",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\": \"GRP2\",\r\n    \"nom\": \"Grand Palais\",\r\n    \"category_id\": \"venue-paraolympic\",\r\n    \"latitude\": 48.86616355,\r\n    \"longitude\": 2.3125474\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{planning_url}}/13",
+              "host": [
+                "{{planning_url}}"
+              ],
+              "path": [
+                "13"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "match",
+      "item": [
+        {
+          "name": "CRUD",
+          "item": [
+            {
+              "name": "get all matches",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{site_match}}",
+                  "host": [
+                    "{{site_match}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update a match from id",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"sport\": \"Judo\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{site_match}}/1",
+                  "host": [
+                    "{{site_match}}"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update a match from id Reverse",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"sport\": \"Basketball\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{site_match}}/1",
+                  "host": [
+                    "{{site_match}}"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get a match from id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{site_match}}/1",
+                  "host": [
+                    "{{site_match}}"
+                  ],
+                  "path": [
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "find matches from date, site and sport",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"date\": \"2024-08-03\",\r\n    \"nomSite\": \"Arena Bercy\",\r\n    \"sport\": \"Basketball\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{site_match}}/find",
+                  "host": [
+                    "{{site_match}}"
+                  ],
+                  "path": [
+                    "find"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "find matches from date and sport",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"date\": \"2024-08-03\",\r\n    // \"nomSite\": \"Arena Bercy\",\r\n    \"sport\": \"Basketball\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{site_match}}/find",
+                      "host": [
+                        "{{site_match}}"
+                      ],
+                      "path": [
+                        "find"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "find matches from date, site and sport",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"date\": \"2024-08-03\",\r\n    \"nomSite\": \"Arena Bercy\"\r\n    // \"sport\": \"Basketball\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{site_match}}/find",
+                      "host": [
+                        "{{site_match}}"
+                      ],
+                      "path": [
+                        "find"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "find matches from date",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"date\": \"2024-08-03\"\r\n    // \"nomSite\": \"Arena Bercy\",\r\n    // \"sport\": \"Basketball\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{site_match}}/find",
+                      "host": [
+                        "{{site_match}}"
+                      ],
+                      "path": [
+                        "find"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "delete a match",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"code\": \"GRP2\",\r\n    \"nom\": \"Grand Palais\",\r\n    \"category_id\": \"venue-paraolympic\",\r\n    \"latitude\": 48.86616355,\r\n    \"longitude\": 2.3125474\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{site_match}}/19",
+                  "host": [
+                    "{{site_match}}"
+                  ],
+                  "path": [
+                    "19"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "create a match",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nomSite\": \"Arena Paris Nord\",\r\n    \"sport\": \"Volleyball assis\",\r\n    \"date\": \"2024-08-03\",\r\n    \"latitude\": 48.9721,\r\n    \"longitude\": 2.5149\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{site_match}}",
+                  "host": [
+                    "{{site_match}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "search",
+          "item": [
+            {
+              "name": "search site with date and sports",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{site_match_search}}/site?date=2024-08-03&sports=Basketball,Volleyball assis",
+                  "host": [
+                    "{{site_match_search}}"
+                  ],
+                  "path": [
+                    "site"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "2024-08-03"
+                    },
+                    {
+                      "key": "sports",
+                      "value": "Basketball,Volleyball assis"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "only sports",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/site?sports=Basketball",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "site"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03",
+                          "disabled": true
+                        },
+                        {
+                          "key": "sports",
+                          "value": "Basketball"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "only date",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/site?date=2024-08-03",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "site"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03"
+                        },
+                        {
+                          "key": "sports",
+                          "value": "Basketball",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "not date nor sports",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/site",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "site"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03",
+                          "disabled": true
+                        },
+                        {
+                          "key": "sports",
+                          "value": "Basketball",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "single sport",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/site?date=2024-08-03&sports=Basketball",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "site"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03"
+                        },
+                        {
+                          "key": "sports",
+                          "value": "Basketball"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "search sports with date and site",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{site_match_search}}/sport?date=2024-08-03&site=Arena Bercy",
+                  "host": [
+                    "{{site_match_search}}"
+                  ],
+                  "path": [
+                    "sport"
+                  ],
+                  "query": [
+                    {
+                      "key": "date",
+                      "value": "2024-08-03"
+                    },
+                    {
+                      "key": "site",
+                      "value": "Arena Bercy"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "only site",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/sport?site=Arena Bercy",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "sport"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03",
+                          "disabled": true
+                        },
+                        {
+                          "key": "site",
+                          "value": "Arena Bercy"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "only date",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/sport?date=2024-08-03",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "sport"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03"
+                        },
+                        {
+                          "key": "site",
+                          "value": "Arena Bercy",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "both",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/sport?date=2024-08-03&site=Arena Bercy",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "sport"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03"
+                        },
+                        {
+                          "key": "site",
+                          "value": "Arena Bercy"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                },
+                {
+                  "name": "without params",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{site_match_search}}/sport",
+                      "host": [
+                        "{{site_match_search}}"
+                      ],
+                      "path": [
+                        "sport"
+                      ],
+                      "query": [
+                        {
+                          "key": "date",
+                          "value": "2024-08-03",
+                          "disabled": true
+                        },
+                        {
+                          "key": "site",
+                          "value": "Arena Bercy",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "site_url",
+      "value": "localhost:7901/site"
+    },
+    {
+      "key": "sport_url",
+      "value": "localhost:7902/sport"
+    },
+    {
+      "key": "site_match",
+      "value": "localhost:7903/match"
+    },
+    {
+      "key": "site_match_search",
+      "value": "localhost:7903/search"
+    },
+    {
+      "key": "planning_url",
+      "value": "localhost:7904/planning"
+    }
+  ]
+}
