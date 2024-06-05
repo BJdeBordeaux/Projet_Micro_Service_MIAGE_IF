@@ -9,12 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>projet_microservice</groupId>
-	<artifactId>olympique</artifactId>
+	<artifactId>planning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>planning</name>
 	<description>planning pour Olympique</description>
 	<properties>
 		<java.version>17</java.version>
+		<start-class>projet_microservice.planning.PlanningApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -49,6 +50,11 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>bson</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

@@ -1,4 +1,4 @@
-package projet_microservice.olympique;
+package projet_microservice.match;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

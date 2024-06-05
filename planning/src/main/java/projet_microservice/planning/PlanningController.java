@@ -1,4 +1,4 @@
-package projet_microservice.olympique;
+package projet_microservice.planning;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

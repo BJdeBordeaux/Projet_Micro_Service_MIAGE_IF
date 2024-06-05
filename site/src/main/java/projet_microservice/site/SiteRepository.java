@@ -1,10 +1,10 @@
-package projet_microservice.olympique;
+package projet_microservice.site;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface SportRepository extends MongoRepository<Sport, ObjectId> {
+public interface SiteRepository extends MongoRepository<Site, ObjectId> {
     // CRUD operations are inherited from MongoRepository
 
-    Sport findByCode(String code_sport);
+    Site findByCode(String code_site);
 }

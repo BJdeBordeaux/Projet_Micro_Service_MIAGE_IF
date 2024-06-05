@@ -1,13 +1,13 @@
-package projet_microservice.olympique;
+package projet_microservice.planning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MatchApplication {
+public class PlanningApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MatchApplication.class, args);
+		SpringApplication.run(PlanningApplication.class, args);
 	}
 
 }

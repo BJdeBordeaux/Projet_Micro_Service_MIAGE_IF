@@ -7,23 +7,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="olympique (4)" />
-        <module name="olympique (3)" />
-        <module name="olympique (2)" />
-        <module name="olympique (1)" />
+        <module name="match" />
+        <module name="planning" />
+        <module name="site" />
+        <module name="sport" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="olympique" target="17" />
+      <module name="olympique (1)" target="17" />
+      <module name="olympique (2)" target="17" />
+      <module name="olympique (3)" target="17" />
+      <module name="olympique (4)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="match" options="-parameters" />
       <module name="olympique" options="-parameters" />
       <module name="olympique (1)" options="-parameters" />
       <module name="olympique (2)" options="-parameters" />
       <module name="olympique (3)" options="-parameters" />
       <module name="olympique (4)" options="-parameters" />
+      <module name="planning" options="-parameters" />
+      <module name="site" options="-parameters" />
+      <module name="sport" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package projet_microservice.olympique;
+package projet_microservice.sport;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,33 +7,26 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document("site")
+@Document("sport")
 @AllArgsConstructor
 @Data
-public class Site {
+public class Sport {
 
     // data are like below
-//    "Code_Site": "GRP",
-//    "Nom_Site": "Grand Palais",
-//    "category_id": "venue-olympic",
-//    "latitude": 48.86616355,
-//    "longitude": 2.3125474
+//    "Code_Sport": "FEN",
+//    "Sport": "Escrime",
+//    "presentation": "L'escrime est un sport de combat utilisant une épée, un sabre ou un fleuret."
 
     @Id
     @Field("_id")
     private ObjectId id;
 
-    @Field("Code_Site")
+    @Field("Code_Sport")
     private String code;
 
-    @Field("Nom_Site")
+    @Field("Sport")
     private String nom;
 
-    private String category_id;
-
-    private double latitude;
-
-    private double longitude;
-
+    private String presentation;
 
 }

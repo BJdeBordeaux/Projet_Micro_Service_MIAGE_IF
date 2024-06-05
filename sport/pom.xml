@@ -9,12 +9,13 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>projet_microservice</groupId>
-    <artifactId>olympique</artifactId>
+    <artifactId>sport</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>sport</name>
     <description>sport pour Olympique</description>
     <properties>
         <java.version>17</java.version>
+        <start-class>projet_microservice.sport.SportApplication</start-class>
     </properties>
     <dependencies>
         <dependency>
