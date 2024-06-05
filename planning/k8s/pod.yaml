@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: planning-app
+  labels:
+    app: planning-app
+spec:
+  containers:
+    - name: planning
+      image: planning:latest
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 7904

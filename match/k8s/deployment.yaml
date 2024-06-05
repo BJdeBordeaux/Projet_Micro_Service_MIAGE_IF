@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: match-deployment
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: match-app
+  template:
+    metadata:
+      labels:
+        app: match-app
+    spec:
+      containers:
+        - name: match-container
+          image: match:latest
+          ports:
+            - containerPort: 7903

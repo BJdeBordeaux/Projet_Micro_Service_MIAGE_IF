@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: planning-deployment
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: planning-app
+  template:
+    metadata:
+      labels:
+        app: planning-app
+    spec:
+      containers:
+        - name: planning-container
+          image: planning:latest
+          ports:
+            - containerPort: 7904

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: site-app
+  labels:
+    app: site-app
+spec:
+  containers:
+    - name: site
+      image: site:latest
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 7901

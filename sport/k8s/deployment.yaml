@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sport-deployment
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: sport-app
+  template:
+    metadata:
+      labels:
+        app: sport-app
+    spec:
+      containers:
+        - name: sport-container
+          image: sport:latest
+          ports:
+            - containerPort: 7902
