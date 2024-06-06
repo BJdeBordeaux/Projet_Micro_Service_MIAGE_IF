@@ -65,4 +65,9 @@ public class SportController {
         sportRepository.save(sport);
         return sport;
     }
+
+    @GetMapping("/search_verif/{nom}")
+    public Sport searchSport(@PathVariable String nom) {
+        return sportRepository.findByNom(nom);
+    }
 }

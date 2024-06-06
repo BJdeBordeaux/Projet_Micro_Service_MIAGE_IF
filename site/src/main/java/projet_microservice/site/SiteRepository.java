@@ -7,4 +7,6 @@ public interface SiteRepository extends MongoRepository<Site, ObjectId> {
     // CRUD operations are inherited from MongoRepository
 
     Site findByCode(String code_site);
+
+    Site findByNom(String nom);
 }

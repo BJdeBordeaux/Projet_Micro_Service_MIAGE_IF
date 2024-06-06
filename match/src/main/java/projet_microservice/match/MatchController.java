@@ -2,9 +2,11 @@ package projet_microservice.match;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -120,5 +122,39 @@ public class MatchController {
         // save the sport
         matchRepository.save(match);
         return match;
+    }
+
+    // verify if a match's sport and site is valide
+    @GetMapping("/verify")
+    public boolean verifyMatch(@RequestBody Match match) {
+        String sport = match.getSport();
+        String site = match.getNomSite();
+        boolean sendVerification = !(sport == null || sport.isBlank() || site == null || site.isBlank());
+        if (!sendVerification) {
+            return false;
+        }
+
+        // verify if the sport and site are valide, sent a request to the sport and site microservices
+        // if the sport and site are valide, return true
+        // else return false
+        RestTemplate restTemplate = new RestTemplate();
+        String urlSport = "http://localhost:7902/sport/search_verif/" + sport;
+        // send a request to the sport microservice, and parse the result as json
+        Map<String, String> sportResult = restTemplate.getForObject(urlSport, Map.class);
+        if (sportResult == null) {
+            return false;
+        }
+
+        String nomSport = sportResult.get("nom");
+        if (nomSport == null) {
+            return false;
+        }
+        String urlSite = "http://localhost:7901/site/search_verif/" + site;
+        Map<String, String> siteResult = restTemplate.getForObject(urlSite, Map.class);
+        if (siteResult == null) {
+            return false;
+        }
+        String nomSite = siteResult.get("nom");
+        return nomSite != null;
     }
 }

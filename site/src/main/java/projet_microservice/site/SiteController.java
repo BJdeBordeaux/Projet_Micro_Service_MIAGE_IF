@@ -71,4 +71,9 @@ public class SiteController {
         siteRepository.save(site);
         return site;
     }
+
+    @GetMapping("/search_verif/{nom}")
+    public Site searchSport(@PathVariable String nom) {
+        return siteRepository.findByNom(nom);
+    }
 }
